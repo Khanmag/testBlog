@@ -31,7 +31,7 @@ export default async function Blog() {
     <h1>Blog</h1>
     <ul>
       {posts.map( (post:TypePost) => 
-        <li>
+        <li key={post.id}>
           <Link href={`/blog/${post.id}`}>{post.title}</Link>
         </li>
         )}
